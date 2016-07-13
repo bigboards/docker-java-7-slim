@@ -1,1 +1,0 @@
-# docker-java-7-slim
