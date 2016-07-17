@@ -10,9 +10,8 @@ RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true 
     && apt-get update \
     && apt-get install -y oracle-java7-installer \
     && apt-get autoremove \
-    && rm -rf /var/lib/apt/lists/* \
     && rm -rf /var/cache/oracle-jdk7-installer \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*.deb /var/cache/apt/archives/partials/* \
     && rm -rf /usr/lib/jvm/java-7-oracle/*src.zip \
               /usr/lib/jvm/java-7-oracle/lib/missioncontrol \
               /usr/lib/jvm/java-7-oracle/lib/visualvm \
